@@ -1,28 +1,24 @@
-const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
-const HtmlWebpackPlugin =  require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+// NPM package imports
+const { merge } = require("webpack-merge");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
+// Project module imports
+const common = require("./webpack.common.js");
+
+// Project module exports
 module.exports = merge(common, {
-  mode: 'production',
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './index.html'
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'img', to: 'img' },
-        { from: 'css', to: 'css' },
-        { from: 'js/vendor', to: 'js/vendor' },
-        { from: 'icon.svg', to: 'icon.svg'},
-        { from: 'favicon.ico', to: 'favicon.ico'},
-        { from: 'tile-wide.png', to: 'tile-wide.png'},
-        { from: 'robots.txt', to: 'robots.txt'},
-        { from: 'icon.png', to: 'icon.png'},
-        { from: '404.html', to: '404.html'},
-        { from: 'site.webmanifest', to: 'site.webmanifest'},
-        { from: 'tile.png', to: 'tile.png'}
-      ],
-    })
-  ],
+	mode: "production",
+	plugins: [
+		new HtmlWebpackPlugin({ template: "./public/index.html" }),
+		new CopyPlugin({ patterns: [
+			{ from: "public/res/css", to: "res/css" },
+			{ from: "public/res/js/vendor", to: "res/js/vendor" },
+			{ from: "public/res/assets/img", to: "res/assets/img" },
+			{ from: "public/404.html", to: "404.html" },
+			{ from: "public/favicon.ico", to: "favicon.ico" },
+			{ from: "public/robots.txt", to: "robots.txt" },
+			{ from: "public/site.webmanifest", to: "site.webmanifest" },
+		]})
+	]
 });

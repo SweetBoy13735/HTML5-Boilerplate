@@ -1,6 +1,6 @@
 // NPM package imports
 const { merge } = require("webpack-merge");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const htmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 // Project module imports
@@ -10,7 +10,7 @@ const common = require("./webpack.common.js");
 module.exports = merge(common, {
 	mode: "production",
 	plugins: [
-		new HtmlWebpackPlugin({ template: "./public/index.html" }),
+		new htmlWebpackPlugin({ template: "./public/index.html" }),
 		new CopyPlugin({ patterns: [
 			{ from: "public/res/css", to: "res/css" },
 			{ from: "public/res/js/vendor", to: "res/js/vendor" },

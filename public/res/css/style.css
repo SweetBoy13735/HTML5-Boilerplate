@@ -3,7 +3,7 @@
 /* What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. */
 
-/* Base styles: opinionated defaults ======================================== */
+/* #region Base styles: opinionated defaults */
 html {
 	color: #222;
 	font-size: 1em;
@@ -48,9 +48,12 @@ fieldset {
 textarea {
 	resize: vertical;
 }
+/* #endregion */
 
-/* Author's custom styles =================================================== */
-/* Helper classes =========================================================== */
+/* #region Author's custom styles */
+/* #endregion */
+
+/* #region Helper classes */
 /* Hide visually and from screen readers */
 .hidden, [hidden] {
 	display: none !important;
@@ -97,10 +100,10 @@ textarea {
 .clearfix::after {
 	clear: both;
 }
+/* #endregion */
 
-/* EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires. ============================================== */
+/* #region EXAMPLE Media Queries for Responsive Design */
+/* These examples override the primary ('mobile first') styles. Modify as content requires. */
 @media only screen and (min-width: 35em) {
 	/* Style adjustments for viewports that meet the condition */
 }
@@ -108,9 +111,10 @@ textarea {
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
 	/* Style adjustments for high resolution devices */
 }
+/* #endregion */
 
-/* Print styles.
-   Inlined to avoid the additional HTTP request:
+/* #region Print styles */
+/* Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/ ===================== */
 @media print {
 	*, *::before, *::after {
@@ -160,3 +164,4 @@ textarea {
 		page-break-after: avoid;
 	}
 }
+/* #endregion */

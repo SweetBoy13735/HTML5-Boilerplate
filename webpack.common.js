@@ -1,12 +1,12 @@
-// NPM package imports
+// External module imports
 const Path = require("path");
 
-// Project module exports
+// Module exports
 module.exports = {
 	entry: { app: "./public/res/js/app.js" },
 	output: {
 		path: Path.resolve(__dirname, "dist"),
 		clean: true,
-		filename: "./public/res/js/app.js",
+		filename: "./res/js/app.js",
 	}
 };

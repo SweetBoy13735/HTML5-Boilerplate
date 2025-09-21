@@ -1,10 +1,10 @@
-// NPM package imports
+// External module imports
 const { merge } = require("webpack-merge");
 
-// Project module imports
+// Internal module imports
 const common = require("./webpack.common.js");
 
-// Project module exports
+// Module exports
 module.exports = merge(common, {
 	mode: "development",
 	devtool: "inline-source-map",

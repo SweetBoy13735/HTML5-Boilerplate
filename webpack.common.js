@@ -1,7 +1,7 @@
-// NPM package imports
+// External module imports
 const Path = require("path");
 
-// Project module exports
+// Module exports
 module.exports = {
 	entry: { app: "./public/res/js/app.js" },
 	output: {

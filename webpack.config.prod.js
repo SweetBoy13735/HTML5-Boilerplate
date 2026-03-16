@@ -1,12 +1,14 @@
-// External module imports
+//#region External module imports
 const { merge } = require("webpack-merge");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+//#endregion
 
-// Internal module imports
+//#region Internal module imports
 const common = require("./webpack.common.js");
+//#endregion
 
-// Module exports
+//#region Module exports
 module.exports = merge(common, {
 	mode: "production",
 	plugins: [
@@ -22,3 +24,4 @@ module.exports = merge(common, {
 		]})
 	]
 });
+//#endregion

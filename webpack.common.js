@@ -1,7 +1,8 @@
-// External module imports
-const Path = require("path");
+//#region External module imports
+const Path = require("node:path");
+//#endregion
 
-// Module exports
+//#region Module exports
 module.exports = {
 	entry: { app: "./public/res/js/app.js" },
 	output: {
@@ -10,3 +11,4 @@ module.exports = {
 		filename: "./res/js/app.js",
 	}
 };
+//#endregion

@@ -1,10 +1,12 @@
-// External module imports
+//#region External module imports
 const { merge } = require("webpack-merge");
+//#endregion
 
-// Internal module imports
+//#region Internal module imports
 const common = require("./webpack.common.js");
+//#endregion
 
-// Module exports
+//#region Module exports
 module.exports = merge(common, {
 	mode: "development",
 	devtool: "inline-source-map",
@@ -15,3 +17,4 @@ module.exports = merge(common, {
 		static: ["./public"]
 	}
 });
+//#endregion

@@ -1,5 +1,5 @@
 // External module imports
-const Path = require("path");
+const Path = require("node:path");
 
 // Module exports
 module.exports = {

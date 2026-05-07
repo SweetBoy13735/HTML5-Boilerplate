@@ -3,6 +3,9 @@
 /* What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. */
 
+/* #region At-rules */
+/* #endregion */
+
 /* #region Base styles: opinionated defaults */
 html {
 	color: #222;
@@ -25,9 +28,9 @@ html {
 /* A better looking default horizontal rule */
 hr {
 	display: block;
-	height: 1px;
+	height: .125rem;
 	border: 0;
-	border-top: 1px solid #ccc;
+	border-top: .125rem solid currentColor;
 	margin: 1em 0;
 	padding: 0;
 }
@@ -115,8 +118,8 @@ a, button {
 
 .grid {
 	display: grid;
-	gap: .75rem;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: .5rem;
+	grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
 }
 /* #endregion */
 
@@ -185,7 +188,7 @@ a, button {
 }
 /* #endregion */
 
-/* #region EXAMPLE Media Queries for Responsive Design */
+/* #region Media Queries for Responsive Design */
 /* These examples override the primary ('mobile first') styles. Modify as content requires. */
 @media only screen and (min-width: 35em) {
 	/* Style adjustments for viewports that meet the condition */

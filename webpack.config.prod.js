@@ -8,20 +8,24 @@ const CopyPlugin = require("copy-webpack-plugin");
 const common = require("./webpack.common.js");
 //#endregion
 
-//#region Module exports
-module.exports = merge(common, {
+//#region Code body
+/** @type {import("webpack").Configuration} */
+const prodConfig = {
 	mode: "production",
-	plugins: [
-		new HTMLWebpackPlugin({ template: "./public/index.html" }),
+	plugins: [new HTMLWebpackPlugin({ template: "./public/index.html" }),
 		new CopyPlugin({ patterns: [
-			{ from: "public/res/css", to: "res/css" },
-			{ from: "public/res/js/vendor", to: "res/js/vendor" },
-			{ from: "public/res/assets/img", to: "res/assets/img" },
-			{ from: "public/404.html", to: "404.html" },
-			{ from: "public/favicon.ico", to: "favicon.ico" },
-			{ from: "public/robots.txt", to: "robots.txt" },
-			{ from: "public/site.webmanifest", to: "site.webmanifest" },
+				{ from: "public/res/css", to: "res/css" },
+				{ from: "public/res/js/vendor", to: "res/js/vendor" },
+				{ from: "public/res/assets", to: "res/assets" },
+				{ from: "public/404.html", to: "404.html" },
+				{ from: "public/favicon.ico", to: "favicon.ico" },
+				{ from: "public/robots.txt", to: "robots.txt" },
+				{ from: "public/site.webmanifest", to: "site.webmanifest" }
 		]})
 	]
-});
+};
+//#endregion
+
+//#region Module exports
+module.exports = merge(common, prodConfig);
 //#endregion

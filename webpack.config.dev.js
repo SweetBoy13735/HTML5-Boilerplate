@@ -6,8 +6,9 @@ const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 //#endregion
 
-//#region Module exports
-module.exports = merge(common, {
+//#region Code body
+/** @type {import("webpack").Configuration} */
+const devConfig = {
 	mode: "development",
 	devtool: "inline-source-map",
 	devServer: {
@@ -15,5 +16,9 @@ module.exports = merge(common, {
 		hot: true,
 		static: ["./public"]
 	}
-});
+};
+//#endregion
+
+//#region Module exports
+module.exports = merge(common, devConfig);
 //#endregion

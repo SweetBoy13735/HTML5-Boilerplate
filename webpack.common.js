@@ -3,6 +3,7 @@ const Path = require("node:path");
 //#endregion
 
 //#region Module exports
+/** @type {import("webpack").Configuration} */
 module.exports = {
 	entry: { app: "./public/res/js/app.js" },
 	output: {

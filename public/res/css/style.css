@@ -118,7 +118,7 @@ a, button {
 
 .grid {
 	display: grid;
-	gap: .5rem;
+	gap: .75rem;
 	grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
 }
 /* #endregion */

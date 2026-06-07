@@ -2,14 +2,18 @@
 const Path = require("node:path");
 //#endregion
 
-//#region Module exports
+//#region Code body
 /** @type {import("webpack").Configuration} */
-module.exports = {
+const commonConfig = {
 	entry: { app: "./public/res/js/app.js" },
 	output: {
+		filename: "[name].bundle.js",
 		path: Path.resolve(__dirname, "dist"),
-		clean: true,
-		filename: "./res/js/app.js",
+		clean: true
 	}
 };
+//#endregion
+
+//#region Module exports
+module.exports = commonConfig;
 //#endregion

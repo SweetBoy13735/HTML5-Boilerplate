@@ -5,7 +5,7 @@ const Path = require("node:path");
 //#region Code body
 /** @type {import("webpack").Configuration} */
 const commonConfig = {
-	entry: { app: "./public/res/js/app.js" },
+	entry: { index: "./public/res/js/index.js" },
 	output: {
 		filename: "[name].bundle.js",
 		path: Path.resolve(__dirname, "dist"),

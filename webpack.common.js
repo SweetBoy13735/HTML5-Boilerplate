@@ -1,15 +1,20 @@
 //#region External module imports
 const Path = require("node:path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+//#endregion
+
+//#region Code body
+/** @type {import("webpack").Configuration} */
+const commonConfig = {
+	entry: { index: "./public/res/js/index.js" },
+	output: {
+		filename: "[name].bundle.js",
+		path: Path.resolve(__dirname, "dist"),
+		clean: true
+	}, plugins: [new HTMLWebpackPlugin({ template: "./public/index.html" })]
+};
 //#endregion
 
 //#region Module exports
-/** @type {import("webpack").Configuration} */
-module.exports = {
-	entry: { app: "./public/res/js/app.js" },
-	output: {
-		path: Path.resolve(__dirname, "dist"),
-		clean: true,
-		filename: "./res/js/app.js",
-	}
-};
+module.exports = commonConfig;
 //#endregion

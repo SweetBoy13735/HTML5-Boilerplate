@@ -1,5 +1,6 @@
 //#region External module imports
 const Path = require("node:path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 //#endregion
 
 //#region Code body
@@ -10,7 +11,7 @@ const commonConfig = {
 		filename: "[name].bundle.js",
 		path: Path.resolve(__dirname, "dist"),
 		clean: true
-	}
+	}, plugins: [new HTMLWebpackPlugin({ template: "./public/index.html" })]
 };
 //#endregion
 

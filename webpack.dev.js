@@ -10,12 +10,11 @@ const Common = require("./webpack.common.js");
 /** @type {import("webpack").Configuration} */
 const devConfig = {
 	mode: "development",
-	devtool: "inline-source-map",
 	devServer: {
 		static: "./public",
 		hot: true,
 		liveReload: true
-	}
+	}, devtool: "inline-source-map"
 };
 //#endregion
 

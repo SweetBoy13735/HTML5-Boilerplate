@@ -3,11 +3,11 @@
 	"short_name": "",
 	"description": "",
 	"start_url": "./",
-	"theme_color": "#fafafa",
-	"background_color": "#fafafa",
+	"theme_color": "#900",
+	"background_color": "#191919",
 	"icons": [{
-		"src": "./res/assets/img/icon.png",
-		"type": "image/png",
-		"sizes": "192x192"
+			"src": "./res/assets/img/icon.png",
+			"type": "image/png",
+			"sizes": "192x192"
 	}]
 }

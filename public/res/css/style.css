@@ -10,7 +10,6 @@
 html {
 	color: #222;
 	font: normal 20px / 1.25 sans-serif;
-	scroll-behavior: smooth;
 }
 
 /* Remove text-shadow in selection highlight: https://twitter.com/miketaylr/status/12228805301
@@ -183,6 +182,12 @@ a, button {
 /* #endregion */
 
 /* #region Media Queries for Responsive Design */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
 /* These examples override the primary ('mobile first') styles. Modify as content requires. */
 @media only screen and (min-width: 35em) {
 	/* Style adjustments for viewports that meet the condition */

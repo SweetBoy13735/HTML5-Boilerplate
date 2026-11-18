@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" xmlns:og="https://OGP.Me/ns">
 	<head>
 		<meta charset="UTF-8" />
 
 		<!-- #region Page metadata -->
 		<meta name="author" content="" />
 		<meta name="description" content="" />
-		<meta name="google-site-verification" content="" />
 		<meta name="keywords" content="" />
-		<meta name="theme-color" content="#990000" />
+		<meta name="theme-color" content="#900" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta property="og:description" content="" />
-		<meta property="og:image" content="" />
-		<meta property="og:image:alt" content="" />
+		<meta name="creator" content="" />
+		<meta name="publisher" content="" />
+		<meta name="google-site-verification" content="" />
 		<meta property="og:title" content="" />
 		<meta property="og:type" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:type" content="" />
+		<meta property="og:image:alt" content="" />
 		<meta property="og:url" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:locale" content="en_GB" />
+		<meta property="og:site_name" content="" />
 		<!-- #endregion -->
-		
+
 		<title>HTML5 Boilerplate</title> <!-- Page title -->
-		
+
 		<!-- #region Resource links -->
 		<link href="./favicon.ico" rel="icon" sizes="any" />
 		<link href="./favicon.ico" rel="shortcut icon" sizes="any" />
@@ -28,12 +33,18 @@
 		<link href="./res/css/style.css" rel="stylesheet" />
 		<link href="./site.webmanifest" rel="manifest" />
 		<!-- #endregion -->
+
+		<!-- #region Scripts -->
+		<script src="./res/js/index.js" defer></script>
+		<!-- #endregion -->
 	</head>
 	<body>
-		<!-- Header -->
-		<header></header>
-
-		<!-- Main content -->
+		<header>
+			<menu>
+				<li>Menu item 1</li>
+				<li>Menu item 2</li>
+			</menu>
+		</header>
 		<main>
 			<h1>Heading 1</h1>
 			<h2>Heading 2</h2>
@@ -42,10 +53,96 @@
 			<h5>Heading 5</h5>
 			<h6>Heading 6</h6>
 			<p>Paragraph</p>
-			<p>Paragraph with <a href="#">link</a></p>
+			<p>Inline elements: <a href="#">link</a>, <q>inline quote</q>, <b>attention-draw</b>, <em>emphasis</em>, <strong>strong importance</strong>, <code>code</code>.</p>
+			<figure>
+				<blockquote>
+					<p>Block-quote</p>
+				</blockquote>
+				<figcaption>Figure caption</figcaption>
+			</figure>
+			<ul>
+				<li>UL item 1</li>
+				<li>UL item 2</li>
+			</ul>
+			<ol>
+				<li>OL item 1</li>
+				<li>OL item 2</li>
+			</ol>
+			<table>
+				<caption>Table caption</caption>
+				<thead>
+					<tr>
+						<th scope="col">Col heading 1</th>
+						<th scope="col">Col heading 2</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Row heading 1</th>
+						<td>Data entry 1</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th scope="row">Row heading 2</th>
+						<td>Data entry 2</td>
+					</tr>
+				</tfoot>
+			</table>
+			<form action="">
+				<fieldset>
+					<legend>Checkboxes</legend>
+					<label>Checkbox 1 <input type="checkbox" name="checkbox-1" /></label>
+					<label>Checkbox 2 <input type="checkbox" name="checkbox-2" /></label>
+				</fieldset>
+				<label>Colour <input type="color" name="colour" /></label>
+				<label>Date <input type="date" name="date" /></label>
+				<label>Date-time local <input type="datetime-local" name="datetime-local" /></label>
+				<label>E-Mail <input type="email" name="email" /></label>
+				<label>File <input type="file" name="file" /></label>
+				<label>Month <input type="month" name="month" /></label>
+				<label>Number <input type="number" name="number" /></label>
+				<label>Password <input type="password" name="password" /></label>
+				<fieldset>
+					<legend>Radio buttons</legend>
+					<label>Radio 1 <input type="radio" name="radio-1" /></label>
+					<label>Radio 2 <input type="radio" name="radio-2" /></label>
+				</fieldset>
+				<label>Range <input type="range" name="range" list="range" min="0" max="100" step="1" /></label>
+				<datalist id="range">
+					<option value="0">Mute</option>
+					<option value="25">25%</option>
+					<option value="50">50%</option>
+					<option value="75">75%</option>
+					<option value="100">Full</option>
+				</datalist>
+				<label>Search <input type="search" name="search" list="search" /></label>
+				<datalist id="search">
+					<option value="Query">Test</option>
+				</datalist>
+				<label>Tel <input type="tel" name="tel" /></label>
+				<label>Text <input type="text" name="text" /></label>
+				<label>Time <input type="time" name="time" /></label>
+				<label>URL <input type="url" name="url" /></label>
+				<label>Week <input type="week" name="week" /></label>
+				<label>
+					Select
+					<select name="select">
+						<option value="opt-1">Option 1</option>
+						<option value="opt-2">Option 2</option>
+					</select>
+				</label>
+				<label>Text area<textarea name="textarea"></textarea></label>
+				<menu>
+					<li>
+						<button type="reset">Reset</button>
+					</li>
+					<li>
+						<button type="submit">Submit</button>
+					</li>
+				</menu>
+			</form>
 		</main>
-
-		<!-- Footer -->
-		<footer></footer>
+		<footer>Footer</footer>
 	</body>
 </html>

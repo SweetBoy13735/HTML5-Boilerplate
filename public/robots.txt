@@ -1,5 +1,5 @@
-# https://www.robotstxt.org/
+# https://www.robotstxt.org
 
-# Allow crawling of all content
+# Allow crawling of all content.
 User-agent: *
 Disallow:

@@ -1,9 +1,5 @@
-//#region External module imports
-const { merge } = require("webpack-merge");
-//#endregion
-
 //#region Internal module imports
-const Common = require("./webpack.common.js");
+import { mergeConfig } from "./webpack.common.js";
 //#endregion
 
 //#region Code body
@@ -11,7 +7,7 @@ const Common = require("./webpack.common.js");
 const devConfig = {
 	mode: "development",
 	devServer: {
-		static: "./public",
+		static: "../public",
 		hot: true,
 		liveReload: true
 	}, devtool: "inline-source-map"
@@ -19,5 +15,5 @@ const devConfig = {
 //#endregion
 
 //#region Module exports
-module.exports = merge(Common, devConfig);
+export default mergeConfig(devConfig);
 //#endregion
